@@ -1,17 +1,38 @@
 def square_array(array)
-  # Use an Enumerable to square every element in the passed in array
-  # Return a new array of the results
+   new_array = []
+  index = 0
+ 
+  while index < array.length do
+    new_array << array[index] * array[index]
+    index += 1
+  end
+ 
+  new_array
 end
 
-def summon_captain_planet(planeteer_calls)
-  # Use an Enumerable to capitalize and add '!' to every element in the passed in array
-  # Return a new array of the results
+def summon_captain_planet(array)
+  nu_array = []
+  i = 0 
+  while i < array.length 
+    nu_array << array[i].capitalize + "!"
+    i += 1 
+  end 
+  nu_array
 end
 
-def long_planeteer_calls(planeteer_calls)
-  # Use an Enumerable to check if any string in the passed in array is greater than 4 characters long
-  # Return the boolean result of this check
+summon_captain_planet(planeteer_calls)
+
+def long_planeteer_calls(array) 
+  i = 0 
+  if  array.any? {|i| i.length > 4}
+    return true
+  else 
+    return false
+  i = i + 1
+  end 
 end
+
+long_planeteer_calls(call_screams)
 
 def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
